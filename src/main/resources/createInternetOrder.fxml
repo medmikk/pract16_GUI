@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.medvedev.pract16.ControllerCreateInternetOrder">
+   <children>
+      <AnchorPane prefHeight="448.0" prefWidth="130.0">
+         <children>
+            <TextField fx:id="nameFieldCustomer" layoutX="2.0" layoutY="41.0" prefHeight="25.0" prefWidth="100.0" text="Иван" />
+            <Label layoutX="2.0" layoutY="24.0" text="Имя" />
+            <TextField fx:id="surnameFieldCustomer" layoutX="2.0" layoutY="83.0" prefHeight="25.0" prefWidth="100.0" text="Иванов" />
+            <Label layoutX="2.0" layoutY="66.0" text="Фамилия" />
+            <TextField fx:id="thirdnameFieldCustomer" layoutX="2.0" layoutY="125.0" prefHeight="25.0" prefWidth="100.0" text="Иванович" />
+            <Label layoutX="1.0" layoutY="108.0" text="Отчество" />
+            <TextField fx:id="cityFieldCustomer" layoutX="3.0" layoutY="209.0" prefHeight="25.0" prefWidth="100.0" text="Москва" />
+            <Label layoutX="4.0" layoutY="192.0" text="Город" />
+            <TextField fx:id="streetnameFieldCustomer" layoutX="4.0" layoutY="248.0" prefHeight="25.0" prefWidth="100.0" text="Тверская" />
+            <Label layoutX="4.0" layoutY="234.0" text="Улица" />
+            <TextField fx:id="houseFieldCustomer" layoutX="3.0" layoutY="290.0" prefHeight="25.0" prefWidth="100.0" text="10" />
+            <Label layoutX="3.0" layoutY="273.0" text="Дом" />
+            <TextField fx:id="flatFieldCustomer" layoutX="3.0" layoutY="332.0" prefHeight="25.0" prefWidth="100.0" text="106" />
+            <Label layoutX="2.0" layoutY="315.0" text="Квартира" />
+            <TextField fx:id="zipcodeFieldCustomer" layoutX="3.0" layoutY="374.0" prefHeight="25.0" prefWidth="100.0" text="10520" />
+            <Label layoutX="5.0" layoutY="357.0" text="Код" />
+            <TextField fx:id="letterFieldCustomer" layoutX="3.0" layoutY="416.0" prefHeight="25.0" prefWidth="100.0" text="а" />
+            <Label layoutX="2.0" layoutY="399.0" text="Буква" />
+            <TextField fx:id="ageFieldCustomer" layoutX="3.0" layoutY="167.0" prefHeight="25.0" prefWidth="100.0" text="20" />
+            <Label layoutX="2.0" layoutY="150.0" text="Возраст" />
+         </children>
+      </AnchorPane>
+      <ScrollPane fx:id="internetOrderListScrollPane" layoutX="130.0" layoutY="224.0" prefHeight="162.0" prefWidth="183.0">
+         <content>
+            <VBox fx:id="itemListVBox" prefHeight="160.0" prefWidth="167.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="130.0" layoutY="207.0" text="Ваш заказ:" />
+      <Label fx:id="totalOrderCostLabel" layoutX="131.0" layoutY="386.0" text="Общая стоимость 0 руб." />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="131.0" layoutY="409.0" mnemonicParsing="false" text="Отмена" />
+      <Button fx:id="acceptButton" layoutX="209.0" layoutY="409.0" mnemonicParsing="false" text="Оформить заказ" />
+      <TextField fx:id="nameItemField" layoutX="130.0" layoutY="40.0" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="130.0" layoutY="23.0" text="Название" />
+      <TextField fx:id="costItemFiedl" layoutX="130.0" layoutY="82.0" prefHeight="25.0" prefWidth="58.0" />
+      <Label layoutX="130.0" layoutY="65.0" text="Цена" />
+      <Label layoutX="130.0" layoutY="107.0" text="Описание" />
+      <TextArea fx:id="descriptionItemArea" layoutX="130.0" layoutY="124.0" prefHeight="45.0" prefWidth="183.0" />
+      <Button fx:id="addButton" layoutX="130.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Добавить в заказ" />
+      <ChoiceBox fx:id="typeMenuItemChoiceBox" layoutX="208.0" layoutY="82.0" prefHeight="25.0" prefWidth="106.0" />
+   </children>
+</AnchorPane>
