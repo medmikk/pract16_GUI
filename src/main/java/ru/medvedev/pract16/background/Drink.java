@@ -8,9 +8,9 @@ public final class Drink extends MenuItem implements Alcoholable{
 
     public Drink(String name, String description){
         try {
-            if (!name.isEmpty() && !description.isEmpty()) {
-                this.description = description;
-                this.name = name;
+            if (!name.trim().isEmpty() && !description.trim().isEmpty()) {
+                this.description = description.trim();
+                this.name = name.trim();
             } else throw new IllegalArgumentException();
         } catch (IllegalArgumentException e) {
         e.printStackTrace();
@@ -19,9 +19,9 @@ public final class Drink extends MenuItem implements Alcoholable{
 
     public Drink(int cost, String name, String description){
         try {
-            if(!name.isEmpty() && !description.isEmpty() && cost > 0) {
-                this.description = description;
-                this.name = name;
+            if(!name.trim().isEmpty() && !description.trim().isEmpty() && cost > 0) {
+                this.description = description.trim();
+                this.name = name.trim();
                 this.cost = cost;
             }
             else throw new IllegalArgumentException();

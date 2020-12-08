@@ -33,6 +33,10 @@ public class InternetOrdersManager implements OrdersManager{
         return queueInternet.add(order, address);
     }
 
+    public boolean remove(Order order){
+        return queueInternet.remove(order);
+    }
+
     public Order remove(){
         return  queueInternet.remove();
     }

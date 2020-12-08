@@ -121,6 +121,7 @@ public class ControllerCreateInternetOrder {
                     address);
 
             internetOrder.setCustomer(customer);
+
             DataContainer.internetOrdersManager.add(internetOrder, address);
 
             try {

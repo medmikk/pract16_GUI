@@ -29,6 +29,15 @@ public class QueueInternet<E>{
     public void chekFreeAddress(Address address) throws OrderAlreadyAddedException {
         if(hashMap.containsValue(address))
             throw new OrderAlreadyAddedException();
+        for (Address value : hashMap.values()) {
+            if(address.getApartmentNumber() == value.getApartmentNumber() &&
+                    address.getBuildingLetter() == value.getBuildingLetter() &&
+                    address.getCityName().equals(value.getCityName()) &&
+                    address.getStreetName().equals(value.getStreetName()) &&
+                    address.getBuildingNumber() == value.getBuildingNumber() &&
+                    address.getZipCode() == value.getZipCode())
+                throw new OrderAlreadyAddedException();
+        }
     }
 
     public boolean add(Order value, Address address)
@@ -67,6 +76,27 @@ public class QueueInternet<E>{
             this.tail = null;
 
         return oldElement;
+    }
+
+
+
+    public boolean remove(Order item) {
+        boolean result;
+        if (result = item != null && !isEmpty()) {
+            Node delete = null;
+            for (Node node = this.head; node != this.tail; node = node.next) {
+                if (node.value.equals(item)) {
+                    delete = node;
+                    break;
+                }
+            }
+            if (result = delete != null) {
+                delete.prev.next = delete.next;
+                delete.next.prev = delete.prev;
+                this.size--;
+            }
+        }
+        return result;
     }
 
     public int queueItemsQuantity(MenuItem item){
